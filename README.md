@@ -87,7 +87,73 @@ public static void main(String[] args) {
         System.out.println();   });
    } }
 
-   4.
+   4. Second max salary sal
+ 
+ public class AsHardAsYouBreath {
+    public static void main(String[] args) {
+        List<Employee> emps= Arrays.asList(new Employee(1,"bha",1),
+                new Employee(2,"bhanga",2),
+                new Employee(3,"mahan", 3),
+                new Employee(3,"foura", 4),
+                new Employee(3,"bherra", 5));
+        //Second m salary sal
+        OptionalInt first = emps.stream().mapToInt(e -> e.getSal()).distinct().sorted().skip(emps.size() - 2).findFirst() ;
+        System.out.println(first.isPresent() );
+        System.out.println("Second high salary sal "+first.getAsInt()); 
+      }  } 
+
+
+ 5.second low salary 
+ 
+public class AsHardAsYouBreath {
+    public static void main(String[] args) { 
+    List<Employee> emps= Arrays.asList(new Employee(1,"bha",1),
+                new Employee(2,"bhanga",2),
+                new Employee(3,"mahan", 3),
+                new Employee(4,"foura", 4),
+                new Employee(5,"bherra", 5)); 
+                //second low salary
+        int n=emps.stream().mapToInt(e->e.getSal()).distinct().sorted().skip(1).findFirst().getAsInt();
+        System.out.println(n); 
+        }
+ } 
+ 
+ 6.  To get employees details  by their salary salary
+   
+public class AsHardAsYouBreath {
+    public static void main(String[] args) {
+
+        List<Employee> emps= Arrays.asList(new Employee(1,"bha",500000000),
+                new Employee(2,"bhanga",30000000),
+                new Employee(3,"mahan", 200000000),
+                new Employee(4,"foura", 100000000),
+                new Employee(5,"bherra", 100000000));
+
+        //To get employees details  by their salary salary
+        List<Employee> emp= emps.stream().filter(e->e.getSal()==100000000).collect(Collectors.toList());
+        for (Employee g:emp) {
+            System.out.println(g.getId()+"_____ "+g.getName()+ "______"+ g.getSal() );
+        }  }); } }
+
+
+  7.To get employees   salary >50000
+  public class AsHardAsYouBreath {
+    public static void main(String[] args) {
+      List<Employee> emps= Arrays.asList(new Employee(1,"bha",500000000),
+                new Employee(2,"bhanga",30000000),
+                new Employee(3,"mahan", 200000000),
+                new Employee(4,"foura", 100000000),
+                new Employee(5,"bherra", 100000000));
+       //To get employees   salary >50000
+        List<Employee> emp = emps.stream().filter(e->e.getSal()>50000).collect(Collectors.toList());
+        for (Employee em:emp ) {
+            System.out.println(em.getId()+"   "+em.getName()+ "   "+ em.getSal() );
+        }  } }
+
+
+
+
+
 
 
 
