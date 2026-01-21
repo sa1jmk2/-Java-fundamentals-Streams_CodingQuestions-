@@ -4,6 +4,22 @@ Emloyee sort,flter,sal grater than less than
 Start Date           :time
       21:01:2026     :11:28 Am  
 
+Questions
+
+
+  1. This code uses Java 8 Streams to filter employees with salary greater than 4000 using filter() and collects the result into a list using collect(), which is then printed.
+   package com.ruse; 
+  2. Employee name Start wiith Letter " m" .
+  3.  Group the Object(Employee)based on the sal
+  4. Second max salary sal
+  5.second low salary
+  6.  To get employees details  by their salary salary
+  7.To get employees   salary >50000
+   
+  
+    
+    
+
       
 Questions
 
